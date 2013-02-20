@@ -1,0 +1,28 @@
+var APICALLS=[
+{
+	title: "Start an analysis",
+	description: "This api calls starts an analysis.",
+	examples:[
+		{
+			title: "a general analysis",
+			method: "POST",
+			path: "/API/v1/analysis/hourly/2013-02-14 16:00",
+			host: "trends.botego.net"
+		}
+	]
+},
+{
+	title: "get detail of a event",
+	description: "This api calls starts an analysis.",
+	examples:[
+		{
+			title: "a general analysis",
+			method: "POST",
+			path: "/API/v1/analysis/hourly/2013-02-14 16:00",
+			headers: [
+				{name:"HOST", value:"trends.botego.net"}
+			]
+		}
+	]
+}
+]

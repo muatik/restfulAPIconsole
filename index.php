@@ -13,6 +13,7 @@
 
 <link href="css/prettify.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
 <link rel="stylesheet" type="text/css" href="css/form.css" />
 
 </head>
