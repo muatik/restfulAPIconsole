@@ -37,7 +37,7 @@ page.renderViewer=function(){
 
 page.renderAPIViewer=function(e){
 	e.preventDefault();
-
+	
 	var id=$(this).attr('href').substr(1);
 	var api=APICALLS[id];
 
@@ -48,13 +48,14 @@ page.renderAPIViewer=function(e){
 		<ul class="examples">';
 
 	for(var i in api.examples){
-		h+='<li><a href="#'+id+'_'+i+'">'+api.examples[i].title+'</a>\
+		h+='<li><a class="example" href="#'+id+'_'+i+'">'+api.examples[i].title+'</a>\
 			<div class="form"></div>\
 			</li>';
 	}
 
 	h+='</ul></div>';
 	
+	$('#viewers').html('');
 	h=$(h).appendTo('#viewers');
 	
 	$('.examples a',h).click(page.showAPIForm);
@@ -67,11 +68,18 @@ page.showAPIForm=function(e){
 	var ids=$(this).attr('href').substr(1).split('_');
 	var apiID=ids[0];
 	var eID=ids[1];
+	var layer=$(this).parent();
+
+	if($('.form', layer).is(':visible')){
+		$('.form', layer).slideUp('fast');
+		return;
+	}
 
 	var e=APICALLS[apiID].examples[eID];
 	
-	e.container=$('.form',$(this).parent());
+	e.container=$('.form',layer);
 	
 	$(e.container).html('');
 	$.uAPIconsole(e);
+	$(e.container).slideDown('fast');
 }
