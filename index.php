@@ -5,8 +5,11 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/api.js"></script>
 <script type="text/javascript" src="js/gcp/prettify.js"></script>
+<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript" src="js/api.js"></script>
+
+<script type="text/javascript" src="APICALLS.json"></script>
 
 <link href="css/prettify.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="css/reset.css" />
@@ -57,7 +60,7 @@ var APICalls=[
 
 
 var t={
-	container:"#e",
+	container:"#sample",
 	headers:[
 		{name:"HOST",value:"training.kelimeci.net"}
 	],
@@ -68,7 +71,7 @@ var t={
 	] 
 };
 
-$.uAPIconsole(t);
+//$.uAPIconsole(t);
 
 
 </script>
