@@ -10,14 +10,23 @@ html,body{
 	box-shadow:1px -1px 15px #888;
 	width:200px;
 }
+#sidePanel a{
+	font:14px sans-serif;
+	color:#2A4FC4;
+}
+
 #logo{
-	font:21px sans-serif;
 	color:#333;
 	padding:10px;
 	border-bottom:1px solid #AAA;
 	text-align:center;
-	box-sahow
 }
+#logo a{
+	color:#333;
+	text-decoration:none;
+	font:21px sans-serif;
+}
+
 #sidePanel h3{
 	color:#444;
 	margin-top:25px;
@@ -44,18 +53,26 @@ html,body{
 	font:14px sans-serif;
 }
 
+
 #sidePanel .newForm{
 	display:inline-block;
 	margin:20px 10px;
-	font:14px sans-serif;
-	color:#2A4FC4;
 }
+
+#sidePanel .about{
+	position:absolute;
+	bottom:20px;
+}
+
 
 
 #viewers{
 	float:left;
 	margin:15px 30px;
 	width:70%;
+}
+.viewer{
+	margin-bottom:30px;
 }
 .viewer h1{
 	font:22px sans-serif;
