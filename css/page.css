@@ -7,7 +7,8 @@ html,body{
 	height:99%;
 	background-color:#f0f0f0;
 	border-right:1px solid #e0e0e0;
-	box-shadow:1px -1px 15px #888
+	box-shadow:1px -1px 15px #888;
+	width:200px;
 }
 #logo{
 	font:21px sans-serif;
@@ -41,4 +42,86 @@ html,body{
 #apicalls a{
 	color:#2A4FC4;
 	font:14px sans-serif;
+}
+
+
+#viewers{
+	float:left;
+	margin:15px 30px;
+	width:70%;
+}
+.viewer h1{
+	font:22px sans-serif;
+	padding:4px 0;
+	margin:4px 0;
+	border-bottom:1px solid #eaeaea;
+}
+.viewer .description{
+	margin:10px 0;
+	font:15px verdana,sans-serif;
+}
+.viewer h4{
+	margin:15px 0 5px 0;
+	font:bold 17px sans-serif;
+	color:#777;
+}
+
+.examples li{
+	padding:7px 10px;
+	border-radius:6px;
+	background-color:#eaeaea;
+	box-shadow:1px 1px 8px #bbb;
+	border:1px solid #ddd;
+}
+.examples a.example{
+	font:19px sans-serif;
+	color:#555;
+	text-decoration:none;
+}
+.examples .form{
+	margin-top:7px;
+	padding-top:7px;
+	border-top:1px solid #d0d0d0;
+	display:none;
+}
+
+.form .tbox{
+	padding:3px 4px;
+	border:1px solid #a8a8a8;
+	background-color:#fafafa;
+	font:13px sans-serif;
+}
+.form .tbox:focus{
+	border-color:#D36D5F;
+	outline:none;
+	background-color:#fff;
+}
+.form .fl{
+	margin:8px 0 3px 0;
+}
+.form h6{
+	font:bold 14px sans-serif;
+	color:#666;
+}
+.form .postFields{
+	margin-top:20px;
+}
+.form .path{
+	width:60%;
+}
+.form .addField{
+	font:11px sans-serif;
+	color:#084da5;
+}
+.form .rm{
+	font:11px sans-serif;
+	text-decoration:none;
+	color:#555;
+	padding:1px 2px;
+}
+.form .rm:hover{
+	color:red;
+}
+.form .submit{
+	margin-top:15px;
 }

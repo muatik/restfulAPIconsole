@@ -24,12 +24,7 @@ $(document).ready(function(){
 		}, options)
 		
 		
-		console.log('creating');
-
-		console.log(s.path);
-
 		var init=function(){
-			console.log('initializing');
 			c=$(s.container);
 			renderForm();
 			bind();
@@ -39,7 +34,7 @@ $(document).ready(function(){
 			$('.method option:contains('+s.requestMethod+')',c).attr('selected','selected');
 			$('.version option:contains('+s.httpVersion+')',c).attr('selected','selected');
 			$('.addField', c).click(addField);
-			$('.rm', c).live({click:rmField});
+			$('.rm', c).on('click',rmField);
 			$('.submit', c).click(submit);
 		}
 		
@@ -96,10 +91,10 @@ $(document).ready(function(){
 			e.preventDefault();
 			var newSet=$(renderNVField('',''));
 			$(this).parent().parent().append(newSet);
+			$('.rm', newSet).click(rmField);
 		}
 		
 		var rmField=function(){
-			console.log('removing');
 			$(this).parent().slideUp(function(){$(this).remove()})
 		}
 
@@ -111,12 +106,19 @@ $(document).ready(function(){
 				version:$('.version option:selected', c).val(),
 				path:$('.path', c).val(),
 				headerFieldNs:[],
-				headerFieldVs:[]
+				headerFieldVs:[],
+				postFieldNs:[],
+				postFieldVs:[]
 			}
 
 			var path=$('.headerFields .i', c).each(function(){
 				fields.headerFieldNs.push($('.n',this).val());
 				fields.headerFieldVs.push($('.v',this).val());
+			});
+
+			var path=$('.postFields .i', c).each(function(){
+				fields.postFieldNs.push($('.n',this).val());
+				fields.postFieldVs.push($('.v',this).val());
 			});
 
 			$.ajax({
@@ -137,57 +139,3 @@ $(document).ready(function(){
 
 })(jQuery);
 
-
-/*
-
-function APIConsole(){
-	this.init();
-}
-
-APIConsole.prototype.init=function(){
-	this.requestMethod= "GET",
-	this.path= "/",
-	this.httpVersion= "HTTP/1.1",
-	this.headers={}
-}
-
-APIConsole.init=function(){
-	$('.APIForm').submit(APIConsole.submit);
-	$('.APIForm .addField').click(APIConsole.addField);
-	$('.postFields .remove').live({click:APIConsole.removeField});
-}
-
-APIConsole.addField=function(e){
-	var postFields=$(this).parent();
-	var currentSet=$('li:first',postFields);
-	var newSet=currentSet.clone();
-	$('input',newSet).val('');
-	newSet.appendTo(currentSet.parent());
-}
-
-APIConsole.removeField=function(e){
-	e.preventDefault();
-	if($('li',$(this).parent().parent()).length>1)
-		$(this).parent().slideUp(function(){$(this).remove();});
-}
-
-APIConsole.submit=function(e){
-	
-	e.preventDefault();
-
-	var host=$('.host', this).val();
-	var url=$('.path', this).val();
-	var type=$('.type option:selected', this).val();
-	var fields=new Object();
-
-	$('.postFields li', this).each(function(){
-		var name=$('.n',this).val();
-		var value=$('.v',this).val();
-		fields[name]=encodeURI(value);
-	})
-	
-	url=url.replace("trend/trendAnalysis/API/console/",'')
-
-
-}
-*/
