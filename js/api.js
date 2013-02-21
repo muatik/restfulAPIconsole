@@ -127,8 +127,8 @@ $(document).ready(function(){
 				cache: false,
 				data: fields
 			}).done(function(r){
-				$('pre.response', c).html(r);
-				prettyPrint();
+				var str=JSON.stringify( JSON.parse(r), undefined, 4);
+				$('pre.response', c).html(str);
 			});
 
 		}
