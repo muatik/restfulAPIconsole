@@ -8,11 +8,12 @@ $(document).ready(function(){
 page.init=function(){
 	page.renderSidePanel();
 	page.renderViewer();
+	page.renderEnterance();
 }
 
 page.renderSidePanel=function(){
 	var h='<div id="sidePanel">\
-		<div id="logo">REST Client</div>\
+		<div id="logo"><a href="" class="home">REST Client</a></div>\
 		<h3>API CALLS</h3>\
 		<ul id="apicalls">';
 
@@ -22,12 +23,14 @@ page.renderSidePanel=function(){
 
 	h+='</ul>\
 		<a href="" class="newForm">New Form</a>\
+		<a href="https://github.com/muatik/universalapiconsole" class="about">About</a>\
 	</div>';
 
 	$(h).appendTo('body');
 
 	$('#apicalls a').click(page.renderAPIViewer);
 	$('.newForm').click(page.renderNewForm);
+	$('.home').click(page.renderEnterance);
 	
 
 }
@@ -36,11 +39,24 @@ page.renderViewer=function(){
 	$('body').append('<div id="viewers"></div>');
 }
 
+page.renderEnterance=function(){
+	$('#viewers').html('');
+	for(var i in APICALLS){
+		id=i;
+		page.createAPIviewer( i, APICALLS[i] );
+	}
+	return false;
+}
+
 page.renderAPIViewer=function(e){
 	e.preventDefault();
-	
 	var id=$(this).attr('href').substr(1);
 	var api=APICALLS[id];
+	$('#viewers').html('');
+	page.createAPIviewer(id,api);
+}
+
+page.createAPIviewer=function(id,api){
 
 	var h='<div class="viewer">\
 		<h1>'+api.title+'</h1>\
@@ -56,7 +72,6 @@ page.renderAPIViewer=function(e){
 
 	h+='</ul></div>';
 	
-	$('#viewers').html('');
 	h=$(h).appendTo('#viewers');
 	
 	$('.examples a',h).click(page.showAPIForm);
