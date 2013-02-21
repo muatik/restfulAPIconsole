@@ -2,7 +2,14 @@
 require_once('quickCurl.php');
 $r=$_REQUEST;
 
-$path=$r['path'];
+$patht=explode('/',$r['path']);
+$path='';
+if (isset($patht))
+	foreach($patht as $p){
+		if (!empty($p))
+			 $path.='/'.rawurlencode($p);
+	}
+
 $version=$r['version'];
 $method=$r['method'];
 
