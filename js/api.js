@@ -128,6 +128,7 @@ $(document).ready(function(){
 				data: fields
 			}).done(function(r){
 				var str=JSON.stringify( JSON.parse(r), undefined, 4);
+				str=jsonSyntaxHighlight(str);
 				$('pre.response', c).html(str);
 			});
 

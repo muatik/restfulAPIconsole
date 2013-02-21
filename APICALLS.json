@@ -18,9 +18,9 @@ var APICALLS=[
 		{
 			title: "a general analysis",
 			method: "POST",
-			path: "/API/v1/analysis/hourly/2013-02-14 16:00",
+			path: "/v1/API/analysis/cached",
 			headers: [
-				{name:"HOST", value:"trends.botego.net"}
+				{name:"host", value:"trend.botego.net"}
 			]
 		}
 	]

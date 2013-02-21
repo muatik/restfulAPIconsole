@@ -1,6 +1,6 @@
 pre {
-	font:13px courier,sans-serif; 
-	outline: 1px 
+	font:13px 'Courier New', courier, monospace;
+	outline: 1px;
 	solid #ccc; 
 	padding: 5px; 
 	margin: 5px; 
@@ -9,4 +9,4 @@ pre .string { color: green; }
 pre .number { color: darkorange; }
 pre .boolean { color: blue; }
 pre .null { color: magenta; }
-pre .key { color: red; }
+pre .key { color: #4E68CE; }
