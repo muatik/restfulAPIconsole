@@ -44,6 +44,13 @@ html,body{
 	font:14px sans-serif;
 }
 
+#sidePanel .newForm{
+	display:inline-block;
+	margin:20px 10px;
+	font:14px sans-serif;
+	color:#2A4FC4;
+}
+
 
 #viewers{
 	float:left;

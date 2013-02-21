@@ -21,12 +21,13 @@ page.renderSidePanel=function(){
 	}
 
 	h+='</ul>\
-		<a href="">Empty Form</a>\
+		<a href="" class="newForm">New Form</a>\
 	</div>';
 
 	$(h).appendTo('body');
 
 	$('#apicalls a').click(page.renderAPIViewer);
+	$('.newForm').click(page.renderNewForm);
 	
 
 }
@@ -82,4 +83,17 @@ page.showAPIForm=function(e){
 	$(e.container).html('');
 	$.uAPIconsole(e);
 	$(e.container).slideDown('fast');
+}
+
+page.renderNewForm=function(e){
+	e.preventDefault();
+	
+	$('#viewers').html('<div class="form" id="newForm"></div>');
+
+
+
+	$.uAPIconsole({
+		container:'#newForm'
+	});
+
 }
