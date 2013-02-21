@@ -23,7 +23,10 @@ page.renderSidePanel=function(){
 
 	h+='</ul>\
 		<a href="" class="newForm">New Form</a>\
+		<div class="bottom">\
 		<a href="https://github.com/muatik/universalapiconsole" class="about">About</a>\
+		<a href="https://github.com/muatik/universalapiconsole/issues" class="issues">Issues</a>\
+		</div>\
 	</div>';
 
 	$(h).appendTo('body');

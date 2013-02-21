@@ -8,7 +8,7 @@ html,body{
 	background-color:#f0f0f0;
 	border-right:1px solid #e0e0e0;
 	box-shadow:1px -1px 15px #888;
-	width:200px;
+	width:240px;
 }
 #sidePanel a{
 	font:14px sans-serif;
@@ -59,7 +59,7 @@ html,body{
 	margin:20px 10px;
 }
 
-#sidePanel .about{
+#sidePanel .bottom{
 	position:absolute;
 	bottom:20px;
 }
@@ -82,8 +82,39 @@ html,body{
 }
 .viewer .description{
 	margin:10px 0;
-	font:15px verdana,sans-serif;
+	font:13px verdana,sans-serif;
 }
+.viewer .description p{
+	margin:10px 0;
+}
+.viewer .description h3{
+	margin-top:25px;
+	font-size:1.3em;
+}
+.viewer .description strong, .viewer .description b{
+	font-weight:bold;
+}
+
+table.params thead{
+	background-color:#B3C8DF;
+	color:#fff;
+	font:bold 13px arial;
+}
+
+table.params thead th{
+	padding:7px;
+}
+table.params tbody tr{
+	background-color:#EAF2FF;
+}
+table.params tbody tr:nth-child(2n+1){
+	background-color:#DAECFF;
+}
+table.params tbody td{
+	padding:7px;
+}
+
+
 .viewer h4{
 	margin:15px 0 5px 0;
 	font:bold 17px sans-serif;
@@ -91,7 +122,7 @@ html,body{
 }
 
 .examples li{
-	margin:7px 0;
+	margin:15px 0;
 	padding:7px 10px;
 	border-radius:6px;
 	background-color:#eaeaea;
