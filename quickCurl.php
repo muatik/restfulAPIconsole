@@ -10,7 +10,7 @@ class quickCurl
 		}
  
 		$ch = curl_init(); 
-        curl_setopt($ch, CURLOPT_URL,$url.'/'.$path);
+        	curl_setopt($ch, CURLOPT_URL,$url.'/'.$path);
                 
 		$headerst = array($reqtype." ".$path." ".$httpv); 
 		
@@ -22,9 +22,9 @@ class quickCurl
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 		}
 		
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headerst);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-        curl_setopt($ch, CURLOPT_TIMEOUT, 30); 
+      		curl_setopt($ch, CURLOPT_HTTPHEADER, $headerst);
+      		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+      		curl_setopt($ch, CURLOPT_TIMEOUT, 30); 
 		
 		$result = curl_exec($ch); 		
 		curl_close($ch); 		
