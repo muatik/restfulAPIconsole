@@ -121,15 +121,23 @@ $(document).ready(function(){
 				fields.postFieldVs.push($('.v',this).val());
 			});
 
+			$('pre.response', c).html(
+				'<img class="loading" src="imgs/loading.gif" alt="processing..." />'
+			);
+
 			$.ajax({
 				type: "POST",
 				url: 'router.php',
 				cache: false,
 				data: fields
-			}).done(function(r){
-				var str=JSON.stringify( JSON.parse(r), undefined, 4);
+			}).done(function(data, textStatus, request){
+				var str=JSON.stringify( JSON.parse(data), undefined, 4);
 				str=jsonSyntaxHighlight(str);
-				$('pre.response', c).html(str);
+				console.log(textStatus);
+				$('pre.response', c).html(
+					'<div class="headers">'+request.getAllResponseHeaders()+'</div>'
+					+str
+				);
 			});
 
 		}

@@ -10,3 +10,9 @@ pre .number { color: darkorange; }
 pre .boolean { color: blue; }
 pre .null { color: magenta; }
 pre .key { color: #4E68CE; }
+
+pre .headers {
+	font:12px courier, monospace;
+	margin-bottom:20px;
+	color:#333;
+}
