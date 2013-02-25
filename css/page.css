@@ -9,6 +9,7 @@ html,body{
 	border-right:1px solid #e0e0e0;
 	box-shadow:1px -1px 15px #888;
 	width:240px;
+	position: fixed;
 }
 #sidePanel a{
 	font:14px sans-serif;
@@ -17,14 +18,16 @@ html,body{
 
 #logo{
 	color:#333;
-	padding:10px;
-	border-bottom:1px solid #AAA;
-	text-align:center;
+	padding:10px 5px;
+	border-bottom:1px solid #ccc;
 }
 #logo a{
-	color:#333;
+	color:#0071B1;
 	text-decoration:none;
 	font:21px sans-serif;
+	background:url('../imgs/transfer-right-left.png') no-repeat;
+	padding-left:35px;
+	background-size:30px 30px
 }
 
 #sidePanel h3{
@@ -41,6 +44,7 @@ html,body{
 #apicalls li{
 	margin:2px 0;
 	padding:4px 12px;
+	color:#888;
 }
 
 #apicalls li:hover{
@@ -68,7 +72,7 @@ html,body{
 
 #viewers{
 	float:left;
-	margin:15px 30px;
+	margin:15px 30px 10px 275px;
 	width:70%;
 }
 .viewer{
@@ -79,6 +83,7 @@ html,body{
 	padding:4px 0;
 	margin:4px 0;
 	border-bottom:1px solid #eaeaea;
+	color:red;
 }
 .viewer .description{
 	margin:10px 0;

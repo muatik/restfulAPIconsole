@@ -22,7 +22,7 @@ page.renderSidePanel=function(){
 	}
 
 	h+='</ul>\
-		<a href="" class="newForm">New Form</a>\
+		<a href="" class="newForm">Empty Form</a>\
 		<div class="bottom">\
 		<a href="https://github.com/muatik/restfulAPIconsole" class="about">About</a>\
 		<a href="https://github.com/muatik/restfulAPIconsole/issues" class="issues">Issues</a>\
