@@ -6,8 +6,7 @@ $patht=explode('/',$r['path']);
 $path='';
 if (isset($patht))
 	foreach($patht as $p){
-		if (!empty($p))
-			 $path.='/'.rawurlencode($p);
+		 $path.='/'.rawurlencode($p);
 	}
 
 $version=$r['version'];
