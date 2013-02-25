@@ -31,7 +31,7 @@ page.renderSidePanel=function(){
 
 	$(h).appendTo('body');
 	
-	$('#apicalls').filterList();
+	$('#apicalls').filterList({itemTag:'li'});
 
 	$('#apicalls a').click(page.renderAPIViewer);
 	$('.newForm').click(page.renderNewForm);

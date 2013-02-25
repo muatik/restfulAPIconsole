@@ -18,7 +18,10 @@
 	$.fn.filterList=function(settings){
 		
 		var settings=$.extend({
-			'container':null
+			'container':null,
+			itemTag: '*',
+			speed: 'fast',
+			placeHolder: 'type to filter'
 		}, settings);
 		
 		this.each(function(){
@@ -28,15 +31,16 @@
 			if(list.hasClass('_filterList'))
 				return;
 			
-			var tbox=$('<input class="_filterListTBox" type="text"  />');
+			var tbox=$('<input class="_filterListTBox" type="text"  '
+				+'placeholder="'+settings.placeHolder+'" />');
 			
 			tbox.bind('keyup change',function(){
 				var keyword=$(this).val();
 				if(keyword==''){
-					list.find('*').slideDown();
+					list.find(settings.itemTag).slideDown();
 				}else{
-					var m=list.find(':icontains('+keyword+')').slideDown();
-					list.find('*').not('._filterListTBox').not(m).slideUp();
+					var m=list.find(settings.itemTag+':icontains('+keyword+')').slideDown(settings.speed);
+					list.find(settings.itemTag).not('._filterListTBox').not(m).slideUp(settings.speed);
 				}
 			});
 
