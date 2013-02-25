@@ -16,7 +16,7 @@ page.renderSidePanel=function(){
 		<div id="logo"><a href="" class="home">REST Client</a></div>\
 		<h3>API CALLS</h3>\
 		<ul id="apicalls">';
-
+	
 	for(var i in APICALLS){
 		h+='<li><a href="#'+i+'">'+APICALLS[i].title+'</a></li>';
 	}
@@ -30,6 +30,8 @@ page.renderSidePanel=function(){
 	</div>';
 
 	$(h).appendTo('body');
+	
+	$('#apicalls').filterList();
 
 	$('#apicalls a').click(page.renderAPIViewer);
 	$('.newForm').click(page.renderNewForm);

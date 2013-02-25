@@ -6,6 +6,7 @@
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jsonPrettifier.js"></script>
+<script type="text/javascript" src="js/jquery-filterList.js"></script>
 <script type="text/javascript" src="js/page.js"></script>
 <script type="text/javascript" src="js/api.js"></script>
 
