@@ -32,7 +32,7 @@ page.renderSidePanel=function(){
 	$(h).appendTo('body');
 	
 	$('#apicalls').filterList({itemTag:'li'});
-
+	
 	$('#apicalls a').click(page.renderAPIViewer);
 	$('.newForm').click(page.renderNewForm);
 	$('.home').click(page.renderEnterance);

@@ -1,8 +1,3 @@
-$(document).ready(function(){
-	//APIConsole.init();
-});
-
-
 (function($){
 
 	$.uAPIconsole=function(options){
@@ -20,7 +15,8 @@ $(document).ready(function(){
 				{name:"accept", value:"*/*"}
 			],
 			postFeilds: {},
-			container:null
+			container:null,
+			timeout:120000 // 120 seconds
 		}, options)
 		
 		
@@ -129,7 +125,8 @@ $(document).ready(function(){
 				type: "POST",
 				url: 'router.php',
 				cache: false,
-				data: fields
+				data: fields,
+				timeout: s.timeout,
 			}).done(function(data, textStatus, request){
 				var str=JSON.stringify( JSON.parse(data), undefined, 4);
 				str=jsonSyntaxHighlight(str);
